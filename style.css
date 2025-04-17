@@ -97,3 +97,26 @@ footer {
   padding: 20px 0;
 }
 
+/* === Flexbox Layout for Project Cards === */
+.project-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 45%;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive stacking on mobile */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
+
