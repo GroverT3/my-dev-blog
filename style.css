@@ -32,6 +32,11 @@ nav {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allows items to stack on smaller screens */
 }
 
 nav a {
