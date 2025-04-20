@@ -16,8 +16,13 @@
     <a href="about.html">About</a>
     <a href="music.html">Music</a>
   </nav>
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+     <span class="close">&times;</span>
+     <iframe src="https://grovert3.github.io/math-card-game/" width="100%" height="500px" frameborder="0"></iframe>
+   </div>
+  </div>
   <main>
-
     <section>
       <h2>My Story</h2>
       <p>I'm a co-parent, musician, and self-taught developer on a mission to change my life in 8 months. I’m learning web development from the ground up while juggling family, beats, and small freelance jobs to grow my skills and build a future I believe in.</p>
@@ -67,7 +72,10 @@
         <strong>Personal Blog</strong> — This site! Built to track my journey and grow my web dev skills.
       </div>
       <div class="project">
-        <strong>Card-Battle Math Game</strong> — A small game in progress to help me learn JavaScript and DOM manipulation.
+  	<strong>Card-Battle Math Game</strong> — A small game in progress to help me learn JavaScript and DOM manipulation.
+  	<br>
+  	<button id="openGameBtn" class="project-button">🎮 Play Game</button>
+  	<a href="https://github.com/GroverT3/math-card-game" class="project-link" target="_blank">🔗 View Source Code</a>
       </div>
       <div class="project">
         <strong>3D Printed PC Case (Upcoming)</strong> — A custom case build using recycled materials and design prototyping.
@@ -107,6 +115,21 @@
   <footer>
     <p>&copy; 2025 Dev Notes Blog</p>
   </footer>
+  	<!This special code is for the math-card-game>
+	<script>
+  const modal = document.getElementById("gameModal");
+  const btn = document.getElementById("openGameBtn");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = () => modal.style.display = "block";
+  span.onclick = () => modal.style.display = "none";
+  window.onclick = (event) => {
+    	if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+	</script>
+  
 </body>
 </html>
 
